@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Haitian Fresh Clothes</title>
+    <style>
+   / body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #111;
+}
+
+section {
+	margin: 20px;
+}
+
+h1 {
+	font-size: 36px;
+	color: #333;
+	text-align: center;
+}
+
+p {
+	font-size: 18px;
+	color: #333;
+	line-height: 1.5;
+}
+
+footer {
+	background-color: #ccc;
+	padding: 10px;
+	text-align: center;
+}
+ /
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Welcome to Haitian Fresh Clothes!</h1>
+      <p>Shop our latest collection of clothing and accessories.</p>
+      <div class="product-grid">
+        <!-- Product information and images here -->
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2022 Haitian Fresh Clothes. All rights reserved.</p>
+    </footer>
+    <script>
+      // JavaScript code for adding items to cart and checkout process
+
+// Define an array to hold items in the shopping cart
+var cartItems = [];
+
+// Function to add an item to the cart
+function addToCart(itemName, itemPrice) {
+    var item = {
+        name: itemName,
+        price: itemPrice
+    };
+    cartItems.push(item);
+    alert("Item added to cart!");
+}
+
+// Function to display the contents of the cart
+function displayCart() {
+    var cart = document.getElementById("cart");
+    cart.innerHTML = "";
+    for (var i = 0; i < cartItems.length; i++) {
+        var item = cartItems[i];
+        var itemRow = document.createElement("div");
+        itemRow.className = "cart-item-row";
+        itemRow.innerHTML = "<div class='cart-item-name'>" + item.name + "</div><div class='cart-item-price'>$" + item.price.toFixed(2) + "</div>";
+        cart.appendChild(itemRow);
+    }
+}
+
+// Function to calculate the total price of the items in
+
+    </script>
+  </body>
+</html>
